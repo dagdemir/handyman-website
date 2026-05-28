@@ -174,18 +174,4 @@ footer {
         width: 100%;
         padding: 0 15px;
     }
-
-    .whatsapp {
-        background: #25D366;
-        color: white;
-        padding: 8px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-left: 15px;
-        font-weight: bold;
-    }
-
-    .whatsapp:hover {
-        background: #1ebe5d;
-    }
 }
