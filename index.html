@@ -19,6 +19,11 @@
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+
+            <!-- WhatsApp Button -->
+            <a class="whatsapp" href="https://wa.me/447123456789" target="_blank">
+                WhatsApp
+            </a>
         </nav>
     </div>
 </header>
@@ -55,7 +60,8 @@
                 <h3>Laminate Flooring</h3>
 
                 <p>
-                    Professional laminate flooring installation with a clean finish, precise fitting, and long-lasting results for your home.
+                    Professional laminate flooring installation with a clean finish, precise fitting, and long-lasting
+                    results for your home.
                 </p>
             </div>
 
@@ -63,7 +69,8 @@
                 <h3>General Handyman</h3>
 
                 <p>
-                    Reliable handyman services for shelves, curtain rails, TV mounting, home repairs, furniture assembly, and many other everyday jobs.
+                    Reliable handyman services for shelves, curtain rails, TV mounting, home repairs, furniture
+                    assembly, and many other everyday jobs.
                 </p>
             </div>
 
@@ -78,7 +85,8 @@
         <h2>About Us</h2>
 
         <p>
-            We provide reliable handyman services with professional workmanship, attention to detail, and fair pricing you can trust.
+            We provide reliable handyman services with professional workmanship, attention to detail, and fair pricing
+            you can trust.
         </p>
 
         <p>
@@ -93,13 +101,14 @@
 
         <h2>Contact Us</h2>
 
+        <!-- WhatsApp Form -->
         <form id="contactForm">
 
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" id="name" placeholder="Your Name" required>
 
-            <input type="email" placeholder="Your Email" required>
+            <input type="email" id="email" placeholder="Your Email" required>
 
-            <textarea placeholder="Tell us what you need" required></textarea>
+            <textarea id="message" placeholder="Tell us what you need" required></textarea>
 
             <button type="submit">Send Message</button>
 
@@ -117,7 +126,24 @@
     <p>© 2026 Reliable Handyman Services. All rights reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let message = document.getElementById('message').value;
+
+        let whatsappMessage =
+            `Hello, my name is ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+        let phoneNumber = "447123456789";
+
+        let url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+        window.open(url, '_blank');
+    });
+</script>
 
 </body>
 </html>
