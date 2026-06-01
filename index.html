@@ -87,19 +87,25 @@
 <section id="about" class="about">
     <div class="container">
 
-        <h2>About Us</h2>
+        <div class="about-card">
 
-        <p>
-            We provide reliable handyman services with professional workmanship, attention to detail, and fair pricing
-            you can trust.
-        </p>
+            <h2>About Us</h2>
 
-        <p>
-            Customer satisfaction is our top priority.
-        </p>
+            <p>
+                We provide reliable handyman services with professional workmanship,
+                attention to detail, and fair pricing you can trust.
+            </p>
+
+            <p>
+                From furniture assembly and laminate flooring to general home repairs,
+                we take pride in delivering quality work and excellent customer service.
+            </p>
+
+        </div>
 
     </div>
 </section>
+
 
 <section id="contact" class="contact">
     <div class="container">
@@ -110,8 +116,6 @@
         <form id="contactForm">
 
             <input type="text" id="name" placeholder="Your Name" required>
-
-            <input type="email" id="email" placeholder="Your Email" required>
 
             <textarea id="message" placeholder="Tell us what you need" required></textarea>
 
@@ -136,11 +140,10 @@
         e.preventDefault();
 
         let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
         let message = document.getElementById('message').value;
 
         let whatsappMessage =
-            `Hello, my name is ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            `Hello, my name is ${name}%0A%0AMessage: ${message}`;
 
         let phoneNumber = "447123456789";
 
@@ -149,6 +152,9 @@
         window.open(url, '_blank');
     });
 </script>
+
+<a href="https://wa.me/447123456789" class="floating-whatsapp" target="_blank"> <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>

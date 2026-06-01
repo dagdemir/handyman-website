@@ -56,14 +56,14 @@ header h1 {
 /* HERO */
 
 .hero {
-    height: 500px;
+    min-height: 500px;
 
     background: linear-gradient(rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.45)),
     url('images/cover.jpg');
 
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 
     display: flex;
@@ -73,6 +73,16 @@ header h1 {
     text-align: center;
     color: white;
 }
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 400px;
+        background-position: center top;
+        padding: 40px 20px;
+    }
+}
+
 
 .hero-content h2 {
     font-size: 3rem;
@@ -107,6 +117,7 @@ header h1 {
 .services h2 {
     text-align: center;
     margin-bottom: 40px;
+    color: orange;
 }
 
 .service-grid {
@@ -151,18 +162,21 @@ header h1 {
 /* ABOUT */
 
 .about {
-    background: white;
     padding: 60px 0;
+}
+
+.about-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
     text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about h2 {
+.about-card h2 {
     margin-bottom: 20px;
-}
-
-.about p {
-    max-width: 800px;
-    margin: 15px auto;
+    color: orange;
 }
 
 /* CONTACT */
@@ -174,6 +188,7 @@ header h1 {
 .contact h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: orange;
 }
 
 form {
@@ -196,12 +211,12 @@ form textarea {
 }
 
 form button {
-    background: #222;
-    color: white;
-    border: none;
+    color: orange;
+    border: 1px solid #ccc;
     padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
+    background: white;
 }
 
 form button:hover {
@@ -257,5 +272,36 @@ footer {
     form {
         width: 100%;
         padding: 0 10px;
+    }
+
+/* FLOATING */
+    .floating-whatsapp {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+
+        width: 60px;
+        height: 60px;
+
+        background: #25D366;
+        color: white;
+
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 30px;
+        text-decoration: none;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+        z-index: 9999;
+    }
+
+    .floating-whatsapp:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
     }
 }
